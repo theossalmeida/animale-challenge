@@ -20,10 +20,14 @@ export const HeaderMobile: FC = () => (
       </span>
     </button>
 
-    {/* logo/text */}
-    <h1 className="text-[20px] font-light leading-none">
-      ANIMALE
-    </h1>
+    {/* logo */}
+    <Image
+        src="/icons/icon_animale.svg"
+        alt="Menu"
+        width={24}
+        height={24}
+        className="w-[24px] h-[24px] items-end"
+      />
 
     {/* search + cart */}
     <div className="flex space-x-4">

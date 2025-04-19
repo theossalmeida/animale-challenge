@@ -1,5 +1,7 @@
 import { useState, useEffect, JSX } from 'react'
 import Image from 'next/image'
+import SubMenu from './SubMenu'
+import menuData from '../dados/submenu.json'
 
 type NavItem =
   | { label: string; href: string }
@@ -11,6 +13,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'JOIAS', href: '/joias' },
   { label: 'SALE', href: '/sale' },
   {
+    label: 'INSIDE',
     icon: <Image src="/icons/icon_inside.svg" alt="INSIDE" width={60} height={55} />,
     href: '/inside',
   }
@@ -18,6 +21,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -26,6 +30,7 @@ export default function Header() {
   }, [])
 
   return (
+    <>
     <header
       className={`
         fixed top-0 left-0 w-full bg-white z-50 overflow-hidden
@@ -46,7 +51,13 @@ export default function Header() {
 
             {/* Logo on top center | 1st header row */}
             <div className="flex items-end justify-center h-1/2">
-              <h1 className="text-[34px] leading-none">ANIMALE</h1>
+              <img
+                  src="/icons/icon_animale.svg"
+                  width={180}
+                  height={180}
+                  alt="Lojas"
+                  className="items-end"
+                />
             </div>
 
             {/* 2nd header row */}
@@ -73,8 +84,14 @@ export default function Header() {
               {/* Navbar on center */}
               <nav className="flex items-center space-x-6">
                 {NAV_ITEMS.map((item, i) => (
-                  <a key={i} href={item.href} className="font-medium hover:underline">
-                    {'label' in item ? item.label : item.icon}
+                  <a 
+                    key={i}
+                    href={item.href}
+                    className="font-medium hover:underline"
+                    onMouseEnter={() => setActiveCategory('label' in item ? item.label : '')}
+                    onMouseLeave={() => setActiveCategory(null)}
+                  >
+                    {'icon' in item ? item.icon : item.label}
                   </a>
                 ))}
               </nav>
@@ -118,6 +135,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-full px-[174px]">
             {/* Icons on left */}
             <nav className="flex items-center space-x-8">
+              {/* The icon appears on actual website, but not on Adobe
               <img
                 src="/icons/icon_lojas.svg"
                 width={20}
@@ -131,11 +149,17 @@ export default function Header() {
                 height={20}
                 alt="Contato"
                 className="w-[20px] h-[20px]"
-              />
+              /> */}
 
               {/* LOGO */}
               <div className="flex items-end justify-center h-1/2">
-                <h1 className="text-[34px] leading-none">ANIMALE</h1>
+              <img
+                  src="/icons/icon_animale.svg"
+                  width={140}
+                  height={140}
+                  alt="Lojas"
+                  className="items-end"
+                />
               </div>
 
               {/* Navbar */}
@@ -178,5 +202,8 @@ export default function Header() {
         </div>
       </div>
     </header>
+    (!activeCategory ? null :
+    <SubMenu data={menuData[activeCategory]} isOpen={true}/>)
+    </>
   )
 }

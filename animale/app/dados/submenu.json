@@ -1,0 +1,23 @@
+{
+  "COLEÇÃO": {
+    "categorias": ["vestido", "top/blusa", "calça", "camisa", "jaqueta", "macacao", "saia", "short", "blazer", "colete", "ver tudo >", "couro", "seda", "tricot", "club/noite", "jeans", "malha", "alfaiataria", "ver tudo >"],
+    "acessorios": ["bolsas", "calçados", "cinto", "colar", "anel", "brinco", "pulseira/bracelete", "echarpe/lenço", "ver tudo >"],
+    "intimates": ["lingerie", "underwear", "ver tudo >"]
+  },
+  "JOIAS": {
+    "categorias": ["aneis", "brincos", "colares", "colares", "pulseiras", "earcuffs", "piercing", "ear hook", "choker", "bracelete", "bazar", "ver tudo >"],
+    "best-sellers": ["lettera", "alianças"]
+  },
+  "NOVIDADES": {
+    "categorias": ["plissados", "neon", "crochê", "transparência"],
+    "lancamentos": ["vestido tule", "jaqueta vinyl", "saia ultracurta"]
+  },
+  "SALE": {
+    "categorias": ["liquidação", "outlet", "oferta-relâmpago"],
+    "descontos": ["até 70% off", "compre 2 pague 1"]
+  },
+  "INSIDE": {
+    "categorias": ["acesso antecipado", "coleção premium", "peças exclusivas"],
+    "beneficios": ["frete grátis", "presentes surpresa"]
+  } 
+}
