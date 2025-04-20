@@ -40,7 +40,7 @@ export default function FloatingMenu() {
         aria-label="Abrir opções"
       >
         <Image
-          src="/icons/icon_floating.svg"
+          src={!open ? "/icons/icon_floating.svg" : "/icons/icon_close.svg"}
           width={24}
           height={24}
           alt="Opções"
@@ -57,16 +57,16 @@ export default function FloatingMenu() {
             <a
               key={href}
               href={href}
-              className="flex items-center px-4 py-2 hover:bg-gray-100"
+              className="flex items-center px-2 py-2 hover:bg-gray-100"
             >
               <Image
                 src={icon}
                 width={20}
                 height={20}
                 alt={label}
-                className="mr-3"
+                className="mr-1"
               />
-              <span className="text-sm font-light">{label}</span>
+              <span className="text-sm font-light whitespace-nowrap">{label}</span>
             </a>
           ))}
         </div>

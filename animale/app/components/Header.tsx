@@ -95,7 +95,7 @@ export default function Header() {
                   <a 
                     key={i}
                     href={item.href}
-                    className="font-medium hover:underline"
+                    className={`font-futura [font-family:'Futura_Lt_BT']  text-[12] hover:underline ${item.label == activeCategory ? 'font-bold border-b' : ''}`}
                     onMouseEnter={() => setActiveCategory('label' in item ? item.label : '')}
                   >
                     {'icon' in item ? item.icon : item.label}

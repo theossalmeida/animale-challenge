@@ -1,1 +1,14 @@
-<?xml version="1.0" ?><svg height="72" id="svg1025" version="1.1" viewBox="0 0 19.05 19.050001" width="72" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1022"/><g id="layer1" style="opacity:1"><g id="g7001"><circle cx="9.5250034" cy="9.5250006" id="circle26376" r="7.4367499" style="font-variation-settings:normal;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"/><path d="M 7.4855332,6.2189735 C 7.8480898,5.3680917 8.6698029,4.8413171 9.551893,4.8943025 c 0.882073,0.052983 1.641937,0.674758 1.910803,1.5635629 0.268866,0.8888065 -0.0087,1.8606726 -0.698518,2.4439353 -0.673913,0.6739166 -1.497496,0.7543287 -1.5795339,3.1515003" id="path32556" style="fill:none;fill-rule:evenodd;stroke:#808080;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke;stop-color:#000000"/><path d="m 93.822266,39.322266 c -0.04861,-2.81e-4 -0.09174,0.04319 -0.0918,0.0918 6e-5,0.04861 0.04319,0.09208 0.0918,0.0918 a 0.18514784,0.18514784 0 0 1 0.002,0 c 0.04839,-6.1e-5 0.09174,-0.04341 0.0918,-0.0918 -6.1e-5,-0.04839 -0.04341,-0.09173 -0.0918,-0.0918 a 0.18514784,0.18514784 0 0 1 -0.002,0 z" id="path33129" style="opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.0677844;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;fill:#808080" transform="matrix(3.2617509,0,0,3.270778,-296.82716,-115.00095)"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="8 10 16 10" fill="none">
+  <path
+    d="M15.5 22C15.2237 22 15 22.2247 15 22.5C15 22.7763 15.2237 23 15.5 23C15.7753 23 16 22.7773 16 22.5C16 22.2247 15.7753 22 15.5 22Z"
+    fill="black"
+    stroke="none"
+  />
+  <path
+    d="M11 13.1653C11 10.8661 12.9549 9 15.3637 9C17.7724 9 19.7273 10.8661 19.7273 13.1653C19.7273 15.4646 17.7724 17.3306 15.3637 17.3306V19.1819"
+    fill="none"
+    stroke="black"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

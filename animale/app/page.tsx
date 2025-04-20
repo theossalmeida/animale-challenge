@@ -1,9 +1,14 @@
 'use client';
 import React from 'react';
-import Header from './components/Header';
+/* Hooks */
 import { useIsMobile } from './hooks/useDevice'
+
+/* Components */
+import Header from './components/Header';
 import HeaderMobile from './components/HeaderMobile';
 import FloatingMenu from './components/FloatingMenu';
+import Footer from './components/Footer';
+import FooterMobile from './components/FooterMobile';
 
 export default function Home() {
 
@@ -14,12 +19,11 @@ export default function Home() {
       <>
         <Header />
         <FloatingMenu />
-        <main className="pt-[140px]">
-            {/* dummy div to force scrolling */}
+        <main className="">
             <div className="h-[200vh] bg-gray-50">
-              {/* you can replace this with your real content */}
             </div>
           </main>
+        <Footer />
       </>
     )
   }
@@ -27,11 +31,12 @@ export default function Home() {
     <>
       <HeaderMobile />
       {/* push content below the fixed header */}
-      <main className="pt-[140px]">
-          <div className="h-[200vh] bg-gray-50">
-            {/* you can replace this with your real content */}
-          </div>
-        </main>
+      <main className="">
+        <div className="relative h-[200vh] bg-gray-50">
+          {/* you can replace this with your real content */}
+        </div>
+      </main>
+      <FooterMobile />
     </>
     );
 }

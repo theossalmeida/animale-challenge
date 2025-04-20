@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 
 export const HeaderMobile: FC = () => (
-  <header className="fixed top-0 left-0 w-full bg-white z-50 overflow-hidden flex items-center justify-between w-full h-10% bg-white p-4">
+  <header className="fixed z-50 top-0 left-0 w-full bg-white overflow-hidden flex items-center justify-between w-full h-[10%] bg-white p-4">
     {/* menu toggle */}
     <button aria-label="Open menu" className="flex flex-col items-center justify-center h-full">
       <Image
@@ -24,9 +24,9 @@ export const HeaderMobile: FC = () => (
     <Image
         src="/icons/icon_animale.svg"
         alt="Menu"
-        width={24}
-        height={24}
-        className="w-[24px] h-[24px] items-end"
+        width={94}
+        height={94}
+        className="w-[94px] h-[94px] items-center"
       />
 
     {/* search + cart */}

@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="44px" height="64px" viewBox="0 0 44 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-    <title>Pin-location-point</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Pin-location-point" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke="#6B6C6E" stroke-width="2">
-            <path d="M42,20.9 C42,34.4 25.8,62 21,62 C16.1,62 0,34.4 0,20.9 C0,9.3 9.4,0 21,0 C32.6,0 42,9.4 42,20.9 L42,20.9 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-            <circle id="Oval" sketch:type="MSShapeGroup" cx="21" cy="20" r="8"></circle>
-        </g>
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="15" height="20"
+     viewBox="0 0 15 20"
+     fill="none">
+  <path fill="currentColor"
+        d="M7.641 20c-.1 0-.198-.03-.285-.098a.511.511 0 0 1-.098-.697l4.116-5.78.28-.463c1.262-2.077 2.174-3.58 2.174-5.522 0-3.857-2.486-6.449-6.187-6.449-3.7 0-6.187 2.596-6.187 6.453 0 2.087 1.078 3.874 2.445 6.134l.01.014 2.668 3.64a.51.51 0 0 1-.091.697.464.464 0 0 1-.669-.095l-2.681-3.657-.026-.037-.02-.034C1.701 11.809.5 9.822.5 7.444.5 3.062 3.438 0 7.641 0c4.204 0 7.142 3.062 7.142 7.444 0 2.23-1.026 3.918-2.325 6.053l-.289.477-.02.03-4.125 5.793a.467.467 0 0 1-.383.2"/>
+  <path fill="currentColor"
+        d="M7.647 4.957c-1.308 0-2.372 1.11-2.372 2.473 0 1.364 1.064 2.474 2.372 2.474 1.309 0 2.373-1.11 2.373-2.474 0-1.363-1.064-2.473-2.373-2.473Zm0 5.941c-1.834 0-3.327-1.556-3.327-3.468 0-1.911 1.493-3.468 3.327-3.468 1.834 0 3.328 1.557 3.328 3.468 0 1.912-1.494 3.468-3.328 3.468Z"/>
 </svg>
