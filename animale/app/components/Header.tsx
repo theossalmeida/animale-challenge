@@ -2,6 +2,7 @@ import { useState, useEffect, JSX } from 'react'
 import Image from 'next/image'
 import SubMenu from './SubMenu'
 import menuData from '../dados/submenu.json'
+import Link from 'next/link'
 
 type NavItem =
   | { label: string; href: string }
@@ -51,13 +52,16 @@ export default function Header() {
 
             {/* Logo on top center | 1st header row */}
             <div className="flex items-end justify-center h-1/2">
-              <img
-                  src="/icons/icon_animale.svg"
-                  width={180}
-                  height={180}
-                  alt="Lojas"
-                  className="items-end"
-                />
+              <a href='/'>
+                <img
+                    src="/icons/icon_animale.svg"
+                    width={180}
+                    height={180}
+                    alt="Lojas"
+                    className="items-end cursor-pointer "
+                  />
+              </a>
+              
             </div>
 
             {/* 2nd header row */}
@@ -65,20 +69,24 @@ export default function Header() {
 
               {/* Icons on top left */}
               <div className="text-black flex space-x-4">
-                <img
-                  src="/icons/icon_lojas.svg"
-                  width={20}
-                  height={20}
-                  alt="Lojas"
-                  className="w-[20px] h-[20px]"
-                />
-                <img
-                  src="/icons/icon_telefone.svg"
-                  width={20}
-                  height={20}
-                  alt="Contato"
-                  className="w-[20px] h-[20px]"
-                />
+                <a href='/lojas'>
+                  <img
+                    src="/icons/icon_lojas.svg"
+                    width={20}
+                    height={20}
+                    alt="Lojas"
+                    className="w-[20px] h-[20px] cursor-pointer"
+                  />
+                </a>
+                <a href='/contatos'>
+                  <img
+                    src="/icons/icon_telefone.svg"
+                    width={20}
+                    height={20}
+                    alt="Contato"
+                    className="w-[20px] h-[20px] cursor-pointer"
+                  />
+                </a>
               </div>
 
               {/* Navbar on center */}
@@ -89,7 +97,6 @@ export default function Header() {
                     href={item.href}
                     className="font-medium hover:underline"
                     onMouseEnter={() => setActiveCategory('label' in item ? item.label : '')}
-                    onMouseLeave={() => setActiveCategory(null)}
                   >
                     {'icon' in item ? item.icon : item.label}
                   </a>
@@ -98,27 +105,33 @@ export default function Header() {
 
               {/* Icons on top right */}
               <div className="flex space-x-4">
-                <img
-                  src="/icons/icon_conta.svg"
-                  width={20}
-                  height={20}
-                  alt="Minha Conta"
-                  className="w-[20px] h-[20px]"
-                />
-                <img
-                  src="/icons/icon_sacola.svg"
-                  width={20}
-                  height={20}
-                  alt="Carrinho"
-                  className="w-[20px] h-[20px]"
-                />
-                <img
-                  src="/icons/icon_busca.svg"
-                  width={20}
-                  height={20}
-                  alt="Buscar"
-                  className="w-[20px] h-[20px]"
-                />
+                <a href='/minha-conta'>
+                  <img
+                    src="/icons/icon_conta.svg"
+                    width={20}
+                    height={20}
+                    alt="Minha Conta"
+                    className="w-[20px] h-[20px] cursor-pointer"
+                  />
+                </a>
+                <a href='/minha-conta'>
+                  <img
+                    src="/icons/icon_sacola.svg"
+                    width={20}
+                    height={20}
+                    alt="Carrinho"
+                    className="w-[20px] h-[20px] cursor-pointer"
+                  />
+                </a>
+                <a href='/minha-conta'>
+                  <img
+                    src="/icons/icon_busca.svg"
+                    width={20}
+                    height={20}
+                    alt="Buscar"
+                    className="w-[20px] h-[20px] cursor-pointer"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -168,6 +181,8 @@ export default function Header() {
                   key={i}
                   href={item.href}
                   className="font-futura font-light hover:underline"
+                  onMouseEnter={
+                    () => setActiveCategory('label' in item ? item.label : '')}
                 >
                   {'label' in item ? item.label : item.icon}
                 </a>
@@ -203,7 +218,12 @@ export default function Header() {
       </div>
     </header>
     (!activeCategory ? null :
-    <SubMenu data={menuData[activeCategory]} isOpen={true}/>)
+    <SubMenu 
+      data={menuData[activeCategory]}
+      isOpen={true}
+      onMouseLeave={() => setActiveCategory(null)}
+      isScrolled={scrolled}
+    />)
     </>
   )
 }
