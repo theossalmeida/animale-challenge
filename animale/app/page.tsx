@@ -3,12 +3,17 @@ import React from 'react';
 /* Hooks */
 import { useIsMobile } from './hooks/useDevice'
 
-/* Components */
-import Header from './components/Header';
-import HeaderMobile from './components/HeaderMobile';
-import FloatingMenu from './components/FloatingMenu';
-import Footer from './components/Footer';
-import FooterMobile from './components/FooterMobile';
+/* Components - desktop */
+import Header from './components/Desktop/Header';
+import BodyContent from './components/Desktop/BodyContent';
+import Footer from './components/Desktop/Footer';
+
+/* Components - desktop */
+import HeaderMobile from './components/Mobile/HeaderMobile';
+import FooterMobile from './components/Mobile/FooterMobile';
+
+/* Components - ui */
+import FloatingMenu from './components/ui/FloatingMenu';
 
 export default function Home() {
 
@@ -19,10 +24,9 @@ export default function Home() {
       <>
         <Header />
         <FloatingMenu />
-        <main className="">
-            <div className="h-[200vh] bg-gray-50">
-            </div>
-          </main>
+        <div className="pt-[110px]">
+          <BodyContent />
+        </div>
         <Footer />
       </>
     )

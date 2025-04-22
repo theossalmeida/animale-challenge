@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useMemo } from 'react'
 
-
 export interface SubMenuProps {
   data: Record<string, string[]>
   isOpen: boolean
@@ -20,14 +19,14 @@ export default function SubMenu({
   topOffset = 140,
   onMouseEnter,
   onMouseLeave,
-  isScrolled}: SubMenuProps) {
+  isScrolled,
+}: SubMenuProps) {
   if (!isOpen || !data) return null
 
-    if (isScrolled) {
-      topOffset = 92
-    }
+  if (isScrolled) {
+    topOffset = 92
+  }
 
-  // Build columns with up to MAX_ITEMS_PER_COLUMN-1
   const groups = useMemo(() => {
     return Object.entries(data).map(([key, items]) => {
       const filtered = items.filter(item => item !== ALWAYS_LAST)
@@ -40,8 +39,7 @@ export default function SubMenu({
         if (current.length === MAX_ITEMS_PER_COLUMN || current_item == ALWAYS_LAST) {
           columns.push([...current])
           current = []
-        }
-        else if (i+1 === filtered.length) {
+        } else if (i + 1 === filtered.length) {
           columns.push([...current, ALWAYS_LAST])
           current = []
         }
@@ -52,25 +50,29 @@ export default function SubMenu({
 
   return (
     <div
-      className="fixed left-0 w-full bg-gray-100 h-100 z-40 py-8 shadow-md justify-between"
+      className="fixed left-0 w-full bg-gray-100 z-40 py-8 shadow-md"
       style={{ top: `${topOffset}px` }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="items-top max-w-screen-xl mx-auto flex space-x-[200px] items-start justify-center">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-12 flex flex-col md:flex-row gap-10 md:gap-[200px] items-start justify-center">
         {groups.map(({ key, columns }) => (
-          <div key={key} className="">
-            <h3 className="px-4 items-start text-sm font-bold uppercase mb-4">{key}</h3>
-            <div className="flex">
+          <div key={key} className="w-full md:w-auto">
+            <h3 className="text-sm font-bold uppercase mb-4">{key}</h3>
+            <div className="flex flex-col md:flex-row gap-4">
               {columns.map((col, ci) => (
                 <ul
-                  className={`${ci > 0 && columns[columns.length-1] != col && col[col.length-1] == ALWAYS_LAST ? ' p-4 border-r border-gray-300' : ''}`}
+                  className={`space-y-3 ${
+                    ci > 0 && columns[columns.length - 1] !== col && col[col.length - 1] === ALWAYS_LAST
+                      ? 'md:border-r md:border-gray-300 md:pr-4'
+                      : ''
+                  }`}
                   key={ci}
                 >
                   {col.map(label => (
-                    <li key={ci} className='text-sm'>
-                      <Link legacyBehavior href='#'>
-                        <a className="hover:underline p-4 whitespace-nowrap">{label}</a>
+                    <li key={label} className="text-sm">
+                      <Link legacyBehavior href="#">
+                        <a className="hover:underline block whitespace-nowrap px-2 md:px-6 py-1">{label}</a>
                       </Link>
                     </li>
                   ))}
