@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         futura: ['Futura Lt BT', 'Futura Md BT'],
       },
+      fontFamily: {
+        didot: ['Didot Regular'],
+      },
     },
   },
   plugins: [],

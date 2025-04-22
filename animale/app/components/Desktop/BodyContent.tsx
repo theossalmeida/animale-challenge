@@ -46,7 +46,7 @@ const BodyContent: React.FC = () => {
       </div>
 
       {/* Row 4 */}
-      <div className="relative w-full flex justify-center items-center aspect-[2/1]">
+      <div className="relative w-full flex justify-center items-center aspect-[5/2]">
         <ImageCard src="/imgs/body_4.png" className="absolute inset-0 z-0" />
         <div className="absolute inset-0 bg-black opacity-40 z-10" />
         <div className="relative z-10 text-white p-8 max-w-xl text-center">

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+
 /* Hooks */
 import { useIsMobile } from './hooks/useDevice'
 
@@ -11,9 +12,11 @@ import Footer from './components/Desktop/Footer';
 /* Components - desktop */
 import HeaderMobile from './components/Mobile/HeaderMobile';
 import FooterMobile from './components/Mobile/FooterMobile';
+import BodyContentMobile from './components/Mobile/BodyContentMobile';
 
 /* Components - ui */
 import FloatingMenu from './components/ui/FloatingMenu';
+import BannerMobile from './components/ui/BannerMobile';
 
 export default function Home() {
 
@@ -34,12 +37,10 @@ export default function Home() {
   return (
     <>
       <HeaderMobile />
-      {/* push content below the fixed header */}
-      <main className="">
-        <div className="relative h-[200vh] bg-gray-50">
-          {/* you can replace this with your real content */}
-        </div>
-      </main>
+      <div className="pt-[110px] bg-[#E6E6E6]">
+        <BannerMobile />
+      </div>
+      <BodyContentMobile />
       <FooterMobile />
     </>
     );

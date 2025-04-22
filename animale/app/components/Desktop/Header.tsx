@@ -1,8 +1,7 @@
 import { useState, useEffect, JSX } from 'react'
 import Image from 'next/image'
 import SubMenu from '../ui/SubMenu'
-import menuData from '../../dados/submenu.json'
-import Link from 'next/link'
+
 
 type NavItem =
   | { label: string; href: string }
@@ -23,10 +22,16 @@ const NAV_ITEMS: NavItem[] = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [menuData, setMenuData] = useState<any>({})
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', onScroll)
+  
+    fetch('/dados/submenu.json')
+      .then((res) => res.json())
+      .then((data) => setMenuData(data))
+  
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
