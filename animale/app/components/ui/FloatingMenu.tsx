@@ -35,7 +35,7 @@ export default function FloatingMenu() {
       {/* Toggle button fixed on the left */}
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed right-0 z-50 bg-white border border-gray-200 p-2 rounded-r-lg shadow-md index-1"
+        className="fixed right-0 z-50 bg-white border border-gray-200 p-2 rounded-l-lg shadow-md index-1"
         style={{ top: `${topPx}px` }}
         aria-label="Abrir opções"
       >
@@ -50,7 +50,7 @@ export default function FloatingMenu() {
       {/* Options panel, fixed below the button */}
       {open && (
         <div
-          className="fixed right-0 z-40 bg-white border border-gray-200 shadow-md rounded-tr-lg rounded-br-lg w-56"
+          className="fixed right-0 z-40 bg-white border border-gray-200 shadow-md rounded-tl-lg rounded-bl-lg w-56"
           style={{ top: `${topPx + buttonSize + 10}px` }}
         >
           {OPTIONS.map(({ icon, label, href }) => (
@@ -66,7 +66,7 @@ export default function FloatingMenu() {
                 alt={label}
                 className="mr-1"
               />
-              <span className="text-sm font-light whitespace-nowrap">{label}</span>
+              <span className="text-sm font-bold whitespace-nowrap">{label}</span>
             </a>
           ))}
         </div>

@@ -1,12 +1,19 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
+interface HeaderMobileProps {
+  onMenuClick: () => void
+}
 
-export const HeaderMobile: FC = () => (
+export const HeaderMobile: FC<HeaderMobileProps> = ({ onMenuClick }) => (
   <header className="fixed z-50 top-0 left-0 w-full bg-white overflow-hidden flex items-center justify-center h-[10%] p-4">
-    
+
     {/* menu toggle */}
-    <button aria-label="Open menu" className="absolute left-4 flex flex-col items-center justify-center h-full">
+    <button
+      aria-label="Open menu"
+      onClick={onMenuClick}
+      className="absolute left-4 flex flex-col items-center justify-center h-full"
+    >
       <Image src="/icons/icon_menu.svg" alt="Menu" width={24} height={24} className="w-[24px] h-[24px]" />
       <span className="mt-[2px] text-[10px] leading-none uppercase font-bold">MENU</span>
     </button>
@@ -20,7 +27,6 @@ export const HeaderMobile: FC = () => (
       <Image src="/icons/icon_sacola.svg" alt="Sacola" width={24} height={24} className="w-[24px] h-[24px]" />
     </div>
   </header>
-
 )
 
 export default HeaderMobile

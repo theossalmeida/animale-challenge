@@ -72,7 +72,7 @@ export default function SubMenu({
                   {col.map(label => (
                     <li key={label} className="text-sm">
                       <Link legacyBehavior href="#">
-                        <a className="hover:underline block whitespace-nowrap px-2 md:px-6 py-1">{label}</a>
+                        <a className="hover:underline block whitespace-nowrap py-1">{label}</a>
                       </Link>
                     </li>
                   ))}

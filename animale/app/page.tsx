@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 /* Hooks */
 import { useIsMobile } from './hooks/useDevice'
@@ -17,10 +17,14 @@ import BodyContentMobile from './components/Mobile/BodyContentMobile';
 /* Components - ui */
 import FloatingMenu from './components/ui/FloatingMenu';
 import BannerMobile from './components/ui/BannerMobile';
+import SideBarMobile from './components/ui/SideBarMobile';
 
 export default function Home() {
+  
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const isMobile = useIsMobile()
+
 
   if (!isMobile) {
     return (
@@ -36,7 +40,8 @@ export default function Home() {
   }
   return (
     <>
-      <HeaderMobile />
+      <HeaderMobile onMenuClick={() => setMenuOpen(true)}/>
+      <SideBarMobile open={menuOpen} setOpen={setMenuOpen} />
       <div className="pt-[110px] bg-[#E6E6E6]">
         <BannerMobile />
       </div>

@@ -45,7 +45,7 @@ const MobileBodyContent = () => {
           overlayContent={(i) => (
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
               <h2 className="text-xl w-[60%] pb-3">LANÇAMENTO{i}</h2>
-              <p className="text-xl text-[56px] leading-[62px] font-didot w-[60%]">LOREM IPSUM{i}</p>
+              <p className="text-xl text-[64px] leading-[80px] font-didot w-[60%]">LOREM IPSUM{i}</p>
               <button className="mt-3 text-white border w-[60%] p-2 py-3 font-light text-xs">SHOP NOW</button>
             </div>
           )}

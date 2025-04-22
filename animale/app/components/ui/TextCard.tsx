@@ -5,7 +5,7 @@ interface TextCardProps {
   subtitle: string;
   linkText: string;
   linkHref: string;
-  bg?: string;
+  bgColor?: string;
   textColor?: string;
   align?: "left" | "center" | "right";
   subtitleWidth?: string;
@@ -16,7 +16,7 @@ const TextCard: React.FC<TextCardProps> = ({
   subtitle,
   linkText,
   linkHref,
-  bg,
+  bgColor,
   textColor,
   align = "center",
   subtitleWidth
@@ -35,12 +35,12 @@ const TextCard: React.FC<TextCardProps> = ({
 
   return (
     <div
-      className={`bg-${bg ?? "black"} text-${textColor ?? "white"} p-20 flex flex-col justify-center h-full`}
+      className={`bg-${bgColor ?? "black"} text-${textColor ?? "white"} p-20 flex flex-col justify-center h-full`}
     >
       <div className={`${alignmentClasses[align]} p-2 flex flex-col`}>
         <h2 className="text-xl font-bold pb-4">{title}</h2>
         <p
-          className={`text-xs mt-2 font-light pb-5 ${subtitleWidth ?? ""} ${subtitleAlignment[align]}`}
+          className={`text-s mt-2 font-light pb-5 ${subtitleWidth ?? ""} ${subtitleAlignment[align]}`}
         >
           {subtitle}
         </p>

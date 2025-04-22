@@ -39,12 +39,12 @@ const Footer: FC = () => {
                 >
                   OK
                 </button>
-                {submitted && (
+              </div>
+              {submitted && (
                   <p className="text-green-600 mt-2">
                     Cadastrado com sucesso!
                   </p>
                 )}
-              </div>
             </div>
           </form>
         </div>

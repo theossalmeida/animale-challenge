@@ -9,14 +9,14 @@ const BodyContent: React.FC = () => {
       {/* Row 1 */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <ImageCard src="/imgs/body_1.png" />
-        <TextCard
-          title="GOLDEN FRIDAY"
-          subtitle="Joias selecionadas com descontos especiais"
-          linkText="SHOP NOW"
-          linkHref="#"
-          align="left"
-          subtitleWidth="w-full md:w-[30%]"
-        />
+          <TextCard
+            title="GOLDEN FRIDAY"
+            subtitle="Joias selecionadas com descontos especiais"
+            linkText="SHOP NOW"
+            linkHref="#"
+            align="center"
+            subtitleWidth="w-full md:w-[70%]"
+          />
       </div>
 
       {/* Row 2 */}
@@ -27,7 +27,7 @@ const BodyContent: React.FC = () => {
           linkText="SHOP NOW"
           linkHref="#"
           align="right"
-          subtitleWidth="w-full md:w-[40%]"
+          subtitleWidth="w-full md:w-[45%]"
         />
         <ImageCard src="/imgs/body_2.png" />
       </div>
@@ -41,7 +41,7 @@ const BodyContent: React.FC = () => {
           linkText="SHOP NOW"
           linkHref="#"
           align="left"
-          subtitleWidth="w-full md:w-[40%]"
+          subtitleWidth="w-full md:w-[55%]"
         />
       </div>
 
@@ -67,7 +67,7 @@ const BodyContent: React.FC = () => {
             subtitle="De Sevilla, capital do flamenco, o vestuário típico da dança mais celebrada da Espanha inspira as novas peças da coleção."
             linkText="SHOP NOW"
             linkHref="#"
-            bg="white"
+            bgColor="white"
             textColor="black"
           />
         </div>
@@ -78,7 +78,7 @@ const BodyContent: React.FC = () => {
             subtitle="A natureza dos célebres jardins espanhóis dá vida às estampas florais"
             linkText="SHOP NOW"
             linkHref="#"
-            bg="white"
+            bgColor="white"
             textColor="black"
           />
         </div>
@@ -89,7 +89,7 @@ const BodyContent: React.FC = () => {
             subtitle="O último editorial também se inspira em Barcelona, cidade iluminada pelo sol. Conheça as cores que são aposta da coleção."
             linkText="SHOP NOW"
             linkHref="#"
-            bg="white"
+            bgColor="white"
             textColor="black"
           />
         </div>
