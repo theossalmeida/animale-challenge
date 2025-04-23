@@ -113,7 +113,7 @@ export default function MobileSidebar({ open, setOpen }: MobileSidebarProps) {
                     <ul className="pl-6 py-2 bg-white border-t border-gray-200">
                       {children.map((item) => (
                         <li key={item}>
-                          <a href="#" className="block py-2 text-xs text-gray-600">{item}</a>
+                          <a href={`${activeCategory == 'COLEÇÃO' && item == 'VER TUDO' ? '/colecao' : ''}`} className="block py-2 text-xs text-gray-600">{item}</a>
                         </li>
                       ))}
                     </ul>
