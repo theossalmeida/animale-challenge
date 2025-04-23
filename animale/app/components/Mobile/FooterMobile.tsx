@@ -16,7 +16,7 @@ const Footer: FC = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
     return (
-      <footer>
+      <footer className="relative z-10">
         {/* Newsletter section always visible on mobile */}
         <form onSubmit={handleSubmit} className="w-full bg-black text-white py-6 px-4">
           <h2 className="text-lg uppercase text-center">NEWSLETTER</h2>

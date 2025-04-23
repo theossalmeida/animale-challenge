@@ -43,10 +43,10 @@ const MobileBodyContent = () => {
           setIndex={setCarousel1Index}
           indicatorsPosition="bottom-right"
           overlayContent={(i) => (
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
-              <h2 className="text-xl w-[60%] pb-3">LANÇAMENTO{i}</h2>
-              <p className="text-xl text-[64px] leading-[80px] font-didot w-[60%]">LOREM IPSUM{i}</p>
-              <button className="mt-3 text-white border w-[60%] p-2 py-3 font-light text-xs">SHOP NOW</button>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 m-auto">
+              <h2 className="text-xl pb-3">LANÇAMENTO{i}</h2>
+              <p className="text-xl text-[71px] leading-[81px] font-didot">LOREM IPSUM{i}</p>
+              <button className="mt-3 text-white border w-[60%] p-2 py-3 font-bold text-xs">SHOP NOW</button>
             </div>
           )}
           indicatorStyle="white"
@@ -60,6 +60,7 @@ const MobileBodyContent = () => {
         <div className="grid grid-cols-2 gap-2 mt-4 px-4">
           {destaques.map((produto, idx) => (
             <ProductCard
+              id={produto.productId}
               key={produto.productId}
               name={produto.productName}
               price={formatParcelado(getPreco(produto), 4)}
@@ -81,6 +82,7 @@ const MobileBodyContent = () => {
         <div className="grid grid-cols-2 gap-2 mt-4 px-4">
           {maisVendidos.map((produto, idx) => (
             <ProductCard
+              id={produto.productId}
               key={produto.productId}
               name={produto.productName}
               price={formatParcelado(getPreco(produto), 8)}
