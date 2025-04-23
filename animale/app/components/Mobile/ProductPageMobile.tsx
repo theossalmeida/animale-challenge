@@ -29,17 +29,20 @@ const ProductPageMobile: FC<ProductPageMobileProps> = ({ product }) => {
       alert('Selecione cor e tamanho antes de adicionar ao carrinho.')
       return
     }
+
+    const uniqueId = `${product.productId}-${selectedColor}-${selectedSize}`
+
     dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: product.productId,
-        name: product.productName,
-        price: product.items[0].sellers[0].commertialOffer.Price,
-        quantity: 1,
-        image: product.items[0].images[0].imageUrl,
-      },
-    })
-  }
+    type: 'ADD_ITEM',
+    payload: {
+      id: uniqueId,
+      name: `${product.productName} (${selectedColor}, ${selectedSize})`,
+      price: product.items[0].sellers[0].commertialOffer.Price,
+      quantity: 1,
+      image: product.items[0].images[0].imageUrl,
+        },
+      })
+    }
 
   return (
     <main className="pt-[100px] pb-[120px] relative">

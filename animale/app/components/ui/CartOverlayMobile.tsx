@@ -8,36 +8,23 @@ const CartOverlayMobile = ({ open, onClose }: { open: boolean; onClose: () => vo
 
   return (
     open && (
-      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
-        <div className="bg-white w-[80%] max-w-md h-full flex flex-col p-4">
-          <button className="self-end font-bold" onClick={onClose}>
-            X
-          </button>
+      <div className="mt-[90px] fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
+        <div className="bg-white w-full max-w-md h-full flex flex-col p-4">
+          <div className='flex justify-between items-center p-2'>
+            {`Sacola (${state.items.reduce((sum, i) => sum + i.quantity, 0)} produtos)`}
+            <button className="self-end font-bold" onClick={onClose}>
+              X
+            </button>
+          </div>
           <div className="overflow-auto flex-1">
             {state.items.map((item) => (
-              <div key={item.id} className="flex items-center justify-between mb-4">
-                <Image src={item.image || ''} alt={item.name} width={50} height={50} className="rounded" />
-                <div>
+              <div key={item.id} className="flex items-center mb-4">
+                <Image src={item.image || ''} alt={item.name} width={60} height={60} />
+                <div className='px-2'>
                   <div>{item.name}</div>
+                  <span className="text-right">R$ {(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
                   <div>Qtd: {item.quantity}</div>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <button
-                    onClick={() =>
-                      dispatch({ type: item.quantity > 1 ? 'REMOVE_ITEM' : 'DELETE_ITEM', payload: { id: item.id } })
-                    }
-                    className="border px-2"
-                  >
-                    -
-                  </button>
-                  <button
-                    onClick={() => dispatch({ type: 'ADD_ITEM', payload: { ...item, quantity: 1 } })}
-                    className="border px-2"
-                  >
-                    +
-                  </button>
-                  <span className="text-right">R$ {(item.price * item.quantity).toFixed(2)}</span>
-                  <button onClick={() => dispatch({ type: 'DELETE_ITEM', payload: { id: item.id } })}>❌</button>
+                  <button onClick={() => dispatch({ type: 'DELETE_ITEM', payload: { id: item.id } })} className='underline text-xs'>Remover produto</button>
                 </div>
               </div>
             ))}
